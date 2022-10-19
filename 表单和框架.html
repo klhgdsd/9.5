@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="xhtml">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单和框架</title>
+    <style>
+        p {
+            color: rgb(171, 56, 56);
+            font-size: 100px;
+        }
+
+        div {
+            color: yellowgreen;
+        }
+
+        .red {
+            color: red;
+        }
+
+        input:focus {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="data.html" method="get">
+        <!-- for 和 id 里面的值要一样  第二次用要换不同的id-->
+        <label for="text">用户名：</label> <input type="text" name="username" value="请输入用户名" id="text"> <br>
+        <label for="text1">密 &nbsp; &nbsp; 码：</label> <input type="password" name="password" maxlength="6" id="text1">
+        <br>
+        <!-- 相同name可以让单选框选一个 -->
+        性别 男性<input type="radio" name="sex" value="男"> 女性<input type="radio" name="sex" value="女"> 无<input type="radio"
+            name="sex" checked> <br>
+        爱好：吃饭<input type="checkbox" name="hobby"> 睡觉<input type="checkbox" name="hobby"> 打豆豆<input type="checkbox"
+            name="hobby"> <br>
+        <!-- botton要结合js搭配使用 -->
+        <input type="submit" value="注册"> <input type="reset" value="重新填写"> <input type="button" value="获取短信验证码"> <br>
+        上传头像：<input type="file"> <br>
+        职业<select>
+            <option class="red">学生</option>
+            <option class="red">打工人</option>
+            <option>无业游民</option>
+            <option>领导者</option>
+            <option selected>无</option>
+        </select>
+        <br>
+        反馈<textarea cols="50" rows="5" class="red">写出你想说的话 </textarea>
+    </form>
+    <a href="data.html">数据</a>
+    <p>我最厉害了</p>
+    <div>我是世界上最厉害的人</div>
+</body>
+
+</html>
